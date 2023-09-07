@@ -2,6 +2,9 @@ const promptForm = document.getElementById("prompt-form");
 const submitButton = document.getElementById("submit-button");
 const questionButton = document.getElementById("question-button");
 const messagesContainer = document.getElementById("messages-container");
+const dark_mode_button = document.getElementById("dark_submit");
+
+const body = document.body;
 
 const appendHumanMessage = (message) => {
   const humanMessageElement = document.createElement("div");
@@ -71,3 +74,16 @@ const handleQuestionClick = async (event) => {
 };
 
 questionButton.addEventListener("click", handleQuestionClick);
+
+dark_mode_button.addEventListener("click", () => {
+  body.classList.toggle("dark_mode");
+  if (body.classList.contains("dark_mode")) {
+    dark_mode_button.textContent = "White mode";
+  }
+  else {
+    dark_mode_button.textContent = "Dark mode";
+  }
+});
+
+
+
