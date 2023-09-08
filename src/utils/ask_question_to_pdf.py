@@ -87,7 +87,7 @@ def ask_question_to_pdf(question):
     return gpt3_completion(
         question
         + document
-        + " tu repondras a cette question en t'appuyant uniquement du docuement"
+        + " tu repondras a cette question en t'appuyant uniquement du document"
     )
 
 
