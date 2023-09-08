@@ -1,3 +1,6 @@
+import os
+
+
 def test_txt(path):
     filename_test = os.path.join(os.path.dirname(__file__), path)
     document_test = open_text_file(filename_test)
